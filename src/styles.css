@@ -8348,6 +8348,18 @@ video {
   z-index: auto;
 }
 
+/* Components */
+
+.body-content {
+  color: #ebf8ff;
+  margin-left: auto;
+  margin-right: auto;
+  background-color: #2a4365;
+  padding: 0.75rem;
+  text-align: center;
+  border-radius: 0.25rem;
+}
+
 @media (min-width: 640px) {
   .sm\:sr-only {
     position: absolute;

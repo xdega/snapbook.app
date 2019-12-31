@@ -2,3 +2,8 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+/* Components */
+.body-content {
+  @apply text-blue-100 ml-auto mr-auto bg-blue-900 p-3 text-center rounded;
+}
