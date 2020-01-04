@@ -5,5 +5,43 @@
 
 /* Components */
 .body-content {
-  @apply text-blue-100 ml-auto mr-auto bg-blue-900 p-3 text-center rounded;
+  @apply w-5/6 text-blue-100 ml-auto mr-auto bg-blue-900 p-3 text-center rounded;
 }
+
+.primary-button {
+  @apply p-4 uppercase py-2 bg-pink-500 rounded;
+  transition: 250ms;
+}
+
+.primary-button:hover {
+  @apply bg-pink-600;
+  transition: 250ms;
+}
+
+.nav-link {
+  @apply inline-block;
+  transition: 250ms;
+}
+
+.nav-link:hover {
+  @apply text-pink-600;
+}
+
+.nav-menu {
+  @apply text-white text-center uppercase font-bold mb-3;
+  transition: 250ms;
+}
+
+/* Responsive */
+@screen md {
+  .body-content {
+    @apply w-4/6;
+  }
+}
+
+@screen lg {
+  .body-content {
+    @apply w-3/6;
+  }
+}
+

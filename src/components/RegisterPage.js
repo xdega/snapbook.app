@@ -4,8 +4,7 @@ import * as ROUTES from '../constants/routes';
 import { withFirebase } from './Firebase'
 
 const RegisterPage = () => (
-  <div className="body-content sm:w-2/4 md:w-3/4 lg:w-3/5">
-    <h1 className="text-xl uppercase mb-6">Register</h1>
+  <div className="body-content">
     <RegisterForm />
   </div>
 );
@@ -71,7 +70,7 @@ class RegisterFormBase extends Component {
       <form onSubmit={this.onSubmit}>
         {error && <p className="mb-3 p-3 bg-pink-500 w-3/4 mx-auto rounded">{error.message}</p>}
         <input
-          className="block p-3 ml-auto mr-auto mb-3 rounded w-3/4 text-gray-800"
+          className="block p-3 ml-auto mr-auto my-3 rounded w-3/4 text-gray-800"
           name="username"
           value={username}
           onChange={this.onChange}
@@ -103,7 +102,7 @@ class RegisterFormBase extends Component {
           placeholder="Confirm Password"
         />
         <button
-          className="p-4 uppercase py-2 bg-pink-500 rounded"
+          className="primary-button"
           disabled={isInvalid}
           type="submit"
         >Sign Up</button>

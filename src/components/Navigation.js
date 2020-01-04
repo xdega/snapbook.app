@@ -8,9 +8,11 @@ import { AuthUserContext } from './Session';
 const Navigation = () => (
   <div>
     <header>
-      <h1 className="text-blue-100 text-center p-3 text-3xl font-black tracking-wide">
-        <span className="text-pink-500">FOTO</span>
-        <span>BOOK</span>
+      <h1 className="text-center p-3 text-3xl font-black tracking-wide">
+        <NavLink to={ROUTES.LANDING}>
+          <span className="text-pink-500 mr-1">FOTO</span>
+          <span className="text-blue-100">BOOK</span>
+        </NavLink>
       </h1>
     </header>
     <nav>
@@ -24,12 +26,12 @@ const Navigation = () => (
 );
 
 const NavigationAuth = () => (
-  <ul className="text-white text-center uppercase font-bold mb-3">
+  <ul className="nav-menu">
     <li className="inline-block">
-      <NavLink activeClassName="text-pink-500" to={ROUTES.HOME}>Home</NavLink>
+      <NavLink activeClassName="text-pink-500" className="nav-link" to={ROUTES.HOME}>Home</NavLink>
     </li>
     <li className="ml-3 inline-block">
-      <NavLink activeClassName="text-pink-500" to={ROUTES.ACCOUNT}>Account</NavLink>
+      <NavLink activeClassName="text-pink-500" className="nav-link" to={ROUTES.ACCOUNT}>Account</NavLink>
     </li>
     <li className="ml-3 inline-block">
       <LogoutLink />
@@ -38,9 +40,12 @@ const NavigationAuth = () => (
 );
 
 const NavigationNoauth = () => (
-  <ul className="text-white text-center uppercase font-bold mb-3">
+  <ul className="nav-menu">
     <li className="ml-3 inline-block">
-      <NavLink activeClassName="text-pink-500" className="block text-white" to={ROUTES.LOGIN}>Log In</NavLink>
+      <NavLink activeClassName="text-pink-500" className="nav-link" to={ROUTES.LOGIN}>Log In</NavLink>
+    </li>
+    <li className="ml-3 inline-block">
+      <NavLink activeClassName="text-pink-500" className="nav-link" to={ROUTES.REGISTER}>Register</NavLink>
     </li>
   </ul>
 );

@@ -6,7 +6,7 @@ const HomePage = () => (
   <AuthUserContext.Consumer>
     {authUser => (
       <div>
-        <p className="body-content w-1/3 rounded">Welcome Home, {authUser.email}</p>
+        <p className="body-content">Welcome Home, {authUser.email}</p>
       </div>
     )}
   </AuthUserContext.Consumer>

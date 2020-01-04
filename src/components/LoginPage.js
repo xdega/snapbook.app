@@ -6,8 +6,7 @@ import { withFirebase } from './Firebase';
 import * as ROUTES from '../constants/routes';
 
 const LoginPage = () => (
-  <div className="body-content sm:w-2/4 md:w-3/4 lg:w-3/5">
-    <h1 className="text-xl uppercase mb-6">Log In</h1>
+  <div className="body-content">
     <LoginForm />
     <RegisterLink />
   </div>
@@ -61,7 +60,7 @@ class LoginFormBase extends Component {
       <form onSubmit={this.onSubmit}>
         {error && <p className="mb-3 p-3 bg-pink-500 w-3/4 mx-auto rounded">{error.message}</p>}
         <input
-          className="block p-3 ml-auto mr-auto mb-3 rounded w-3/4 text-gray-800"
+          className="block p-3 ml-auto mr-auto my-3 rounded w-3/4 text-gray-800"
           name="email"
           value={email}
           onChange={this.onChange}
@@ -77,7 +76,7 @@ class LoginFormBase extends Component {
           placeholder="Password"
         />
         <button
-          className="p-4 uppercase py-2 bg-pink-500 rounded"
+          className="primary-button"
           disabled={isInvalid}
           type="submit"
         >Log In</button>

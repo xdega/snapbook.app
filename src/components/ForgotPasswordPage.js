@@ -4,7 +4,7 @@ class ForgotPasswordPage extends Component {
   render() {
     return (
       <div>
-        <p className="body-content w-1/3 rounded">Forgotten Password Form</p>
+        <p className="body-content">Forgotten Password Form</p>
       </div>
     );
   }
