@@ -3,7 +3,7 @@ import { withAuthorization } from './Session';
 
 const AccountPage = () => (
   <div>
-    <p className="body-content w-1/3 rounded">Account Settings</p>
+    <p className="body-content">Account Settings</p>
   </div>
 );
 

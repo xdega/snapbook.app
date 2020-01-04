@@ -15,17 +15,24 @@ import { withAuthentication } from './components/Session';
 
 const App = () => (
   <Router>
-    <Navigation />
-    <div>
-      <Route exact path={ROUTES.LANDING} component={LandingPage} />
-      <Route path={ROUTES.REGISTER} component={RegisterPage} />
-      <Route path={ROUTES.LOGIN} component={LoginPage} />
-      <Route path={ROUTES.HOME} component={HomePage} />
-      <Route path={ROUTES.FORGOT_PASSWORD} component={ForgotPasswordPage} />
-      <Route path={ROUTES.ACCOUNT} component={AccountPage} />
-      <Route path={ROUTES.ADMIN} component={AdminPage} />
+    <div className="flex flex-col min-h-screen">
+      <Navigation />
+      <div className="flex-grow">
+        <Route exact path={ROUTES.LANDING} component={LandingPage} />
+        <Route path={ROUTES.REGISTER} component={RegisterPage} />
+        <Route path={ROUTES.LOGIN} component={LoginPage} />
+        <Route path={ROUTES.HOME} component={HomePage} />
+        <Route path={ROUTES.FORGOT_PASSWORD} component={ForgotPasswordPage} />
+        <Route path={ROUTES.ACCOUNT} component={AccountPage} />
+        <Route path={ROUTES.ADMIN} component={AdminPage} />
+      </div>
+      <Footer />
     </div>
   </Router>
+);
+
+const Footer = () => (
+    <footer className="flex justify-center text-gray-700">Web Fresh &trade; | &copy; { new Date().getFullYear() } </footer>
 );
 
 export default withAuthentication(App);
