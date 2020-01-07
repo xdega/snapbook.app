@@ -8361,6 +8361,13 @@ video {
   border-radius: 0.25rem;
 }
 
+.page-subhead {
+  text-align: left;
+  text-transform: uppercase;
+  color: #cbd5e0;
+  font-weight: 700;
+}
+
 .primary-button {
   padding: 1rem;
   text-transform: uppercase;
@@ -8371,7 +8378,18 @@ video {
   transition: 250ms;
 }
 
-.primary-button:hover {
+.primary-button-mini {
+  font-size: 0.75rem;
+  padding: 0.5rem;
+  text-transform: uppercase;
+  padding-top: 0.25rem;
+  padding-bottom: 0.25rem;
+  background-color: #ed64a6;
+  border-radius: 0.25rem;
+  transition: 250ms;
+}
+
+.primary-button:hover, .primary-button-mini:hover {
   background-color: #d53f8c;
   transition: 250ms;
 }

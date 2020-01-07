@@ -8,12 +8,21 @@
   @apply w-5/6 text-blue-100 ml-auto mr-auto bg-blue-900 p-3 text-center rounded;
 }
 
+.page-subhead {
+  @apply text-left uppercase text-gray-400 font-bold;
+}
+
 .primary-button {
   @apply p-4 uppercase py-2 bg-pink-500 rounded;
   transition: 250ms;
 }
 
-.primary-button:hover {
+.primary-button-mini {
+  @apply text-xs p-2 uppercase py-1 bg-pink-500 rounded;
+  transition: 250ms;
+}
+
+.primary-button:hover, .primary-button-mini:hover {
   @apply bg-pink-600;
   transition: 250ms;
 }

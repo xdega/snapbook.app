@@ -31,7 +31,7 @@ const NavigationAuth = () => (
       <NavLink activeClassName="text-pink-500" className="nav-link" to={ROUTES.HOME}>Home</NavLink>
     </li>
     <li className="ml-3 inline-block">
-      <NavLink activeClassName="text-pink-500" className="nav-link" to={ROUTES.ACCOUNT}>Account</NavLink>
+      <NavLink activeClassName="text-pink-500" className="nav-link" to={ROUTES.PHOTOS}>My Photos</NavLink>
     </li>
     <li className="ml-3 inline-block">
       <LogoutLink />
