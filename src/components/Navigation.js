@@ -10,7 +10,7 @@ const Navigation = () => (
     <header>
       <h1 className="text-center p-3 text-3xl font-black tracking-wide">
         <NavLink to={ROUTES.LANDING}>
-          <span className="text-pink-500 mr-1">FOTO</span>
+          <span className="text-pink-500 mr-1">SNAP</span>
           <span className="text-blue-100">BOOK</span>
         </NavLink>
       </h1>
