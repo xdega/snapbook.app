@@ -1,6 +1,7 @@
 import app from 'firebase/app';
 import 'firebase/auth';
 import 'firebase/database';
+import 'firebase/storage';
 
 const config = {
   apiKey: "AIzaSyAENkrr6mrpa9kXUimjaDWrjN8I4tdaT0Y",
@@ -18,6 +19,7 @@ class Firebase {
 
     this.auth = app.auth();
     this.db = app.database();
+    this.store = app.storage();
   }
   
   // Auth API interface
@@ -34,12 +36,20 @@ class Firebase {
   doPasswordUpdate = (password) => 
       this.auth.currentUser.updatePassword(password);
 
-  // User API interface
-  user = uid => this.db.ref('users/' + uid);
+  // Users DB API interface
+  user = (uid) => this.db.ref('users/' + uid);
   users = () => this.db.ref('users');
-  
+
+  photos = (uid) => this.db.ref('users/' + uid + '/photos/');
+
   // Content API interface
   content = page => this.db.ref('content').child(page);
+
+  // Storage API interface
+  upload = (uid, file) => this.store.ref(uid + '/' + file.name).put(file);
+
+  getFile = (uid, filename) =>   
+    this.store.ref(uid).child(filename).getDownloadURL();
 
 }
 

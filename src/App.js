@@ -6,7 +6,7 @@ import LandingPage from './components/LandingPage';
 import RegisterPage from './components/RegisterPage';
 import LoginPage from './components/LoginPage';
 import ForgotPasswordPage from './components/ForgotPasswordPage';
-import AccountPage from './components/AccountPage';
+import PhotosPage from './components/PhotosPage';
 import AdminPage from './components/AdminPage';
 import HomePage from './components/HomePage';
 
@@ -23,7 +23,7 @@ const App = () => (
         <Route path={ROUTES.LOGIN} component={LoginPage} />
         <Route path={ROUTES.HOME} component={HomePage} />
         <Route path={ROUTES.FORGOT_PASSWORD} component={ForgotPasswordPage} />
-        <Route path={ROUTES.ACCOUNT} component={AccountPage} />
+        <Route path={ROUTES.PHOTOS} component={PhotosPage} />
         <Route path={ROUTES.ADMIN} component={AdminPage} />
       </div>
       <Footer />
@@ -32,7 +32,7 @@ const App = () => (
 );
 
 const Footer = () => (
-    <footer className="flex justify-center text-gray-700">Web Fresh &trade; | &copy; { new Date().getFullYear() } </footer>
+    <footer className="flex justify-center text-gray-700 mb-2">Web Fresh &trade; | &copy; { new Date().getFullYear() } </footer>
 );
 
 export default withAuthentication(App);
