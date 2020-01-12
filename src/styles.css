@@ -8394,6 +8394,12 @@ video {
   transition: 250ms;
 }
 
+.primary-button:disabled, .primary-button-mini:disabled {
+  background-color: #2c5282;
+  cursor: not-allowed;
+  text-decoration: line-through;
+}
+
 .nav-link {
   display: inline-block;
   transition: 250ms;

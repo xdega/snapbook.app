@@ -27,6 +27,12 @@
   transition: 250ms;
 }
 
+.primary-button:disabled, .primary-button-mini:disabled {
+  @apply bg-blue-800;
+  cursor: not-allowed;
+  text-decoration: line-through;
+}
+
 .nav-link {
   @apply inline-block;
   transition: 250ms;

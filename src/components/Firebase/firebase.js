@@ -39,7 +39,14 @@ class Firebase {
   // Users DB API interface
   user = (uid) => this.db.ref('users/' + uid);
   users = () => this.db.ref('users');
+  usernames = () => this.db.ref('usernames');
 
+  userByUsername = (username) => 
+    this.db.ref('users')
+    .orderByChild('username')
+    .equalTo(username);
+
+ 
   photos = (uid) => this.db.ref('users/' + uid + '/photos/');
 
   // Content API interface
