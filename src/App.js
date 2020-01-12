@@ -9,6 +9,7 @@ import ForgotPasswordPage from './components/ForgotPasswordPage';
 import PhotosPage from './components/PhotosPage';
 import AdminPage from './components/AdminPage';
 import HomePage from './components/HomePage';
+import ProfilePage from './components/ProfilePage';
 
 import * as ROUTES from './constants/routes';
 import { withAuthentication } from './components/Session';
@@ -25,6 +26,9 @@ const App = () => (
         <Route path={ROUTES.FORGOT_PASSWORD} component={ForgotPasswordPage} />
         <Route path={ROUTES.PHOTOS} component={PhotosPage} />
         <Route path={ROUTES.ADMIN} component={AdminPage} />
+        <Route path="/profile/:username" component={ProfilePage} />
+        {/* TODO: Direct this empty profile below to 404 */}
+        <Route exact path="/profile/" component={ProfilePage} />
       </div>
       <Footer />
     </div>
