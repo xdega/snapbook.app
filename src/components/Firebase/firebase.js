@@ -45,7 +45,6 @@ class Firebase {
     this.db.ref('users')
     .orderByChild('username')
     .equalTo(username);
-
  
   photos = (uid) => this.db.ref('users/' + uid + '/photos/');
 
@@ -55,8 +54,9 @@ class Firebase {
   // Storage API interface
   upload = (uid, file) => this.store.ref(uid + '/' + file.name).put(file);
 
-  getFile = (uid, filename) =>   
-    this.store.ref(uid).child(filename).getDownloadURL();
+  getFile = (uid, filename) => this.store.ref(uid).child(filename).getDownloadURL();
+
+  fileRef = (uid, filename) => this.store.ref(uid).child(filename);
 
 }
 
