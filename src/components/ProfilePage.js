@@ -32,6 +32,10 @@ class ProfilePage extends Component {
       });
   }
 
+  componentWillUnmount() {
+    this.props.firebase.userByUsername(this.state.username).off();
+  }
+
   render() {
     return (
       <div className="body-content">

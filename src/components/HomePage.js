@@ -1,12 +1,14 @@
 import React from 'react';
-
 import { AuthUserContext, withAuthorization } from './Session';
+import HomeContent from './HomeContent';
 
 const HomePage = () => (
   <AuthUserContext.Consumer>
     {authUser => (
       <div>
-        <p className="body-content">Welcome Home, {authUser.email}</p>
+        <div className="body-content">
+          <HomeContent uid={authUser.uid} />
+        </div>
       </div>
     )}
   </AuthUserContext.Consumer>
