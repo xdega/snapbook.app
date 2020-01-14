@@ -36,7 +36,7 @@ const App = () => (
 );
 
 const Footer = () => (
-    <footer className="flex justify-center text-gray-700 mb-2">Web Fresh &trade; | &copy; { new Date().getFullYear() } </footer>
+    <footer className="flex justify-center text-gray-700 mb-2">Liam Hockley | &copy; { new Date().getFullYear() } </footer>
 );
 
 export default withAuthentication(App);
