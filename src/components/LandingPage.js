@@ -23,8 +23,11 @@ class LandingPage extends Component {
 
   render() {
     return (
-      <div>
-        <p className="body-content">{this.state.body}</p>
+      <div className="body-content"
+        dangerouslySetInnerHTML={{
+          __html: this.state.body
+        }}
+        >
       </div>
     );
   }
